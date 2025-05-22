@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista Productos</h1>
+    <table id="lista-productos">
+
+    </table>
+    <script>
+        fetch("Productos.json")
+        .then(response=>response.json())
+        .then(datos=>{
+            for(producto of datos.productos){
+                let tabla=document.getElementById("lista-productos");
+                nuevaFila = document.createElement("tr");
+                columnaNombre = document.createElement("td");
+                columnaNombre.textContent = producto.nombre;
+                columnaPrecio = document.createElement("td");
+                columnaPrecio.textContent = producto.precio;
+                columnaCategoria = document.createElement("td");
+                columnaCategoria.textContent = producto.categoria;
+                for(producto of producto.resenias){
+                    nuevoParrafo = document.createElement("p");
+                    nuevoParrafo.innerHTML = producto.resenias;
+                    columnaResenias = document.createElement("td");
+                    columnaResenias.textContent = producto.resenias;
+                }
+                //agrego las columnas a la fila
+                nuevaFila.appendChild(columnaNombre);
+                nuevaFila.appendChild(columnaPrecio);
+                nuevaFila.appendChild(columnaCategoria);
+                nuevaFila.appendChild(columnaResenias);
+                tabla.appendChild(nuevaFila);
+                tabla.style.border="3px solid red";
+                columnaCategoria.style.border="2px solid orange";
+                columnaNombre.style.border="2px solid pink";
+                columnaPrecio.style.border="2px solid blue";
+                nuevaFila.style.border="2px solid green";
+                tabla.style.borderCollapse="Collapse";
+            }
+        })
+    </script>
+</body>
+</html>

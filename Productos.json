@@ -1,0 +1,24 @@
+{
+    "productos":[
+        {"nombre":"Lenovo 90",
+         "precio":300,
+         "categoria":"Informática",
+         "resenias":["Bien","Mal","Horrible","Espantoso","Catedralicio"]
+        },
+        {"nombre":"Tostador X5000",
+         "precio":99,
+         "categoria":"Electrodomestico",
+         "resenias":["Bien","Mal","Horrible","Espantoso","Catedralicio"]
+        },
+        {"nombre":"Frigorifico frigoreante",
+         "precio":600,
+         "categoria":"Electrodomestico",
+         "resenias":["Bien","Mal","Horrible","Espantoso","Catedralicio"]
+        },
+        {"nombre":"Addiddas night 90",
+         "precio":199,
+         "categoria":"Deporte",
+         "resenias":["Bien","Mal","Horrible","Espantoso","Catedralicio"]
+        }
+    ]
+}
