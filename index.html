@@ -23,7 +23,7 @@
                 columnaPrecio.textContent = producto.precio;
                 columnaCategoria = document.createElement("td");
                 columnaCategoria.textContent = producto.categoria;
-                for(producto of producto.resenias){
+                for(prod of producto.resenias){
                     nuevoParrafo = document.createElement("p");
                     nuevoParrafo.innerHTML = producto.resenias;
                     columnaResenias = document.createElement("td");
@@ -39,6 +39,7 @@
                 columnaCategoria.style.border="2px solid orange";
                 columnaNombre.style.border="2px solid pink";
                 columnaPrecio.style.border="2px solid blue";
+                columnaResenias.style.border="2px solid purple";
                 nuevaFila.style.border="2px solid green";
                 tabla.style.borderCollapse="Collapse";
             }
